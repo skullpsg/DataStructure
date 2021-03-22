@@ -16,6 +16,14 @@ namespace Datastructure.Tree
             root = TreeDSNode.Create(rootValue);
         }
 
+        public TreeDS(TreeDSNode rootNode)
+        {
+            if (rootNode == null)
+                throw new NullReferenceException();
+            root = rootNode;
+        }
+
+
         public void AddLeft(int nodeValue, int leftOfValue)
         {
             throw new NotImplementedException();

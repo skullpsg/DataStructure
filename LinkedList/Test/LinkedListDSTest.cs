@@ -3,7 +3,7 @@ using Datastructure.LinkedList;
 using Moq;
 using NUnit.Framework;
 
-namespace DatastructureTest.LinkedList
+namespace Datastructure.LinkedList.Test
 {
 
     [TestFixture]

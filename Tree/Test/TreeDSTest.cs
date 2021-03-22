@@ -5,7 +5,7 @@ using Datastructure.Tree.Model;
 using Moq;
 using NUnit.Framework;
 
-namespace DatastructureTest.Tree
+namespace Datastructure.Tree.Test
 {
 
     [TestFixture]
