@@ -1,13 +1,11 @@
-﻿using Datastructure;
-using Datastructure.LinkedList;
-using Moq;
+﻿using Moq;
 using NUnit.Framework;
 
 namespace Datastructure.LinkedList.Test
 {
 
     [TestFixture]
-    class LinkedListDSTest
+    public class LinkedListDSTest
     {
 
         [Test]

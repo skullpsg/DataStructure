@@ -9,7 +9,7 @@ namespace Datastructure.Tree.Test
 {
 
     [TestFixture]
-    class TreeDSTest
+    public class TreeDSTest
     {
 
         [Test]

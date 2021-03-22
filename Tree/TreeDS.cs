@@ -36,9 +36,17 @@ namespace Datastructure.Tree
                 return root;
 
             if (root.Left != null)
-                GetNodeUsingRecursion(root.Left, valueToFind);
-            if (root.Left != null)
-                GetNodeUsingRecursion(root.Right, valueToFind);
+            {
+                var node = GetNodeUsingRecursion(root.Left, valueToFind);
+                if (node != null)
+                    return node;
+            }
+            if (root.Right != null)
+            {
+                var node = GetNodeUsingRecursion(root.Right, valueToFind);
+                if (node != null)
+                    return node;
+            }
 
             return null;
         }
