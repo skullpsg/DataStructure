@@ -1,7 +1,4 @@
-﻿using Datastructure;
-using Datastructure.Common;
-using Datastructure.LinkedList;
-using Datastructure.Tree;
+﻿using Datastructure.Common;
 using Datastructure.Tree.Model;
 using Moq;
 using NUnit.Framework;
@@ -19,7 +16,7 @@ namespace Datastructure.Tree.Test
         {
             var expectedOutputs = new List<int>() { 1, 2, 4, 5, 3, 6 };
             IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
-            TreeDSNode rootNode = GetTree();
+            TreeDSNode rootNode = TreeTestData.GetSimpleTreeRootNode();
             TreeTraversal tree = new TreeTraversal(rootNode, writerMock);
             tree.PreOrderTraversal();
         }
@@ -29,7 +26,7 @@ namespace Datastructure.Tree.Test
         {
             var expectedOutputs = new List<int>() { 4, 5, 2, 6, 3, 1 };
             IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
-            TreeDSNode rootNode = GetTree();
+            TreeDSNode rootNode = TreeTestData.GetSimpleTreeRootNode();
             TreeTraversal tree = new TreeTraversal(rootNode, writerMock);
             tree.InOrderTraversal();
         }
@@ -37,7 +34,7 @@ namespace Datastructure.Tree.Test
         [Test]
         public void ShouldReturnNodeByValue()
         {
-            TreeDSNode rootNode = GetTree();
+            TreeDSNode rootNode = TreeTestData.GetSimpleTreeRootNode();
 
             // finding node which is available in left side of the tree
             TreeTraversal tree = new TreeTraversal(rootNode);
@@ -63,7 +60,7 @@ namespace Datastructure.Tree.Test
         {
             var expectedOutputs = new List<int>() { 4, 5, 2, 6, 3, 1 };
             IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
-            TreeDSNode rootNode = GetTree();
+            TreeDSNode rootNode = TreeTestData.GetSimpleTreeRootNode();
             TreeTraversal tree = new TreeTraversal(rootNode, writerMock);
             tree.PostOrderTraversal();
         }
@@ -73,22 +70,11 @@ namespace Datastructure.Tree.Test
         {
             var expectedOutputs = new List<int>() {1,2,3,4,5,6 };
             IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
-            TreeDSNode rootNode = GetTree();
+            TreeDSNode rootNode = TreeTestData.GetSimpleTreeRootNode();
             TreeTraversal tree = new TreeTraversal(rootNode, writerMock);
             tree.LevelOrderTraversal();
         }
 
 
-        private TreeDSNode GetTree()
-        {
-            TreeDSNode nodeWithValue4, nodeWithValue6, root;
-            nodeWithValue4 = TreeDSNode.Create(4);
-            var nodeWithValue5 = TreeDSNode.Create(5);
-            nodeWithValue6 = TreeDSNode.Create(6);
-            TreeDSNode nodeWithValue2 = new TreeDSNode(2, nodeWithValue4, nodeWithValue5);
-            TreeDSNode nodeWithValue3 = new TreeDSNode(3, nodeWithValue6, null);
-            root = new TreeDSNode(1, nodeWithValue2, nodeWithValue3);
-            return root;
-        }
     }
 }
