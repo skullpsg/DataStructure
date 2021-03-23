@@ -1,5 +1,6 @@
 ﻿using Datastructure.Tree.Model;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,14 +11,18 @@ namespace Datastructure.Tree
     public class TreeDS
     {
         public TreeDSNode root = null;
+        public IConsoleWriter console = null;
 
-        public TreeDS(int rootValue)
+        public TreeDS(int rootValue, IConsoleWriter console = null)
         {
+
+            this.console = console;
             root = TreeDSNode.Create(rootValue);
         }
 
-        public TreeDS(TreeDSNode rootNode)
+        public TreeDS(TreeDSNode rootNode, IConsoleWriter console = null)
         {
+            this.console = console;
             if (rootNode == null)
                 throw new NullReferenceException();
             root = rootNode;
@@ -29,6 +34,24 @@ namespace Datastructure.Tree
             throw new NotImplementedException();
         }
 
+        public void PreOrderTraversal()
+        {
+            Stack stack = new Stack();
+            stack.Push(this.root);
+            while (stack.Count != 0)
+            {
+                var currentNode = (TreeDSNode)stack.Pop();
+                PrintNode(currentNode);
+                if (currentNode.Right != null)
+                {
+                    stack.Push(currentNode.Right);
+                }
+                if (currentNode.Left != null)
+                {
+                    stack.Push(currentNode.Left);
+                }
+            }
+        }
         public TreeDSNode GetNodeUsingRecursion(TreeDSNode root, int valueToFind)
         {
 
@@ -49,6 +72,14 @@ namespace Datastructure.Tree
             }
 
             return null;
+        }
+
+        private void PrintNode(TreeDSNode node)
+        {
+            if (console != null)
+                console.WriteLine(node.Value);
+            else
+                System.Console.Out.WriteLine(node.Value);
         }
     }
 }

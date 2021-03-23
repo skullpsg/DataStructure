@@ -17,15 +17,11 @@ namespace Datastructure.Tree.Test
         [Test]
         public void ShouldPrintTreeInPreOrder()
         {
-            var expectedOutputs = new List<int>() { 1, 2, 3 };
+            var expectedOutputs = new List<int>() { 1, 2, 4, 5, 3, 6 };
             IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
-
-            LinkedListDS linkedList = new LinkedListDS(writerMock);
-            linkedList.Add(1);
-            linkedList.Add(2);
-            linkedList.Add(3);
-
-            linkedList.Result();
+            TreeDSNode rootNode = GetTree();
+            TreeDS tree = new TreeDS(rootNode, writerMock);
+            tree.PreOrderTraversal();
         }
 
         [Test]
