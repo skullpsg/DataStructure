@@ -52,6 +52,23 @@ namespace Datastructure.Tree
                 }
             }
         }
+
+        public void InOrderTraversal()
+        {
+            Stack stack = new Stack();
+            var currentNode = this.root;
+            while (stack.Count != 0)
+            {
+                while (currentNode != null)
+                {
+                    stack.Push(currentNode);
+                    currentNode = currentNode.Left;
+                }
+                PrintNode(currentNode);
+                currentNode = ((TreeDSNode)stack.Pop()).Right;
+            }
+        }
+
         public TreeDSNode GetNodeUsingRecursion(TreeDSNode root, int valueToFind)
         {
 

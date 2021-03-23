@@ -25,6 +25,16 @@ namespace Datastructure.Tree.Test
         }
 
         [Test]
+        public void ShouldPrintTreeInInOrder()
+        {
+            var expectedOutputs = new List<int>() { 4, 5, 2, 6, 3, 1 };
+            IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
+            TreeDSNode rootNode = GetTree();
+            TreeDS tree = new TreeDS(rootNode, writerMock);
+            tree.InOrderTraversal();
+        }
+
+        [Test]
         public void ShouldReturnNodeByValue()
         {
             TreeDSNode rootNode = GetTree();
