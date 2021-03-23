@@ -48,6 +48,16 @@ namespace Datastructure.Tree.Test
 
         }
 
+        [Test]
+        public void ShouldPrintTreeInPostOrder()
+        {
+            var expectedOutputs = new List<int>() { 4, 5, 2, 6, 3, 1 };
+            IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
+            TreeDSNode rootNode = GetTree();
+            TreeDS tree = new TreeDS(rootNode, writerMock);
+            tree.PostOrderTraversal();
+        }
+
         private TreeDSNode GetTree()
         {
             TreeDSNode nodeWithValue4, nodeWithValue6, root;

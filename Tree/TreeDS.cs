@@ -74,6 +74,43 @@ namespace Datastructure.Tree
             return null;
         }
 
+        public void PostOrderTraversal()
+        {
+            var currentNode = this.root;
+            Stack stack = new Stack();
+            int lastPrint = 0;
+            while (currentNode != null || stack.Count != 0)
+            {
+                if (currentNode == null)
+                {
+                    currentNode = (TreeDSNode)stack.Pop();
+                }
+
+                if (currentNode.Right?.Value == lastPrint)
+                {
+                    PrintNode(currentNode);
+                    lastPrint = currentNode.Value;
+                    currentNode = null;
+                }
+                else if (currentNode.Left != null && currentNode.Left.Value != lastPrint)
+                {
+                    stack.Push(currentNode);
+                    currentNode = currentNode.Left;
+                }
+                else if (currentNode.Right != null)
+                {
+                    stack.Push(currentNode);
+                    currentNode = currentNode.Right;
+                }
+                else
+                {
+                    PrintNode(currentNode);
+                    lastPrint = currentNode.Value;
+                    currentNode = null;
+                }
+            }
+        }
+
         private void PrintNode(TreeDSNode node)
         {
             if (console != null)
