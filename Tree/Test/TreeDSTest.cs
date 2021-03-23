@@ -68,6 +68,17 @@ namespace Datastructure.Tree.Test
             tree.PostOrderTraversal();
         }
 
+        [Test]
+        public void ShouldPrintTreeInLevelOrder()
+        {
+            var expectedOutputs = new List<int>() {1,2,3,4,5,6 };
+            IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
+            TreeDSNode rootNode = GetTree();
+            TreeDS tree = new TreeDS(rootNode, writerMock);
+            tree.LevelOrderTraversal();
+        }
+
+
         private TreeDSNode GetTree()
         {
             TreeDSNode nodeWithValue4, nodeWithValue6, root;

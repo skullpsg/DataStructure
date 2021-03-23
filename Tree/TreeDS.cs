@@ -128,6 +128,25 @@ namespace Datastructure.Tree
             }
         }
 
+        public void LevelOrderTraversal()
+        {
+            Queue queue = new Queue();
+            queue.Enqueue(root);
+            while (queue.Count != 0)
+            {
+                var currentNode = (TreeDSNode)queue.Dequeue();
+                PrintNode(currentNode);
+                if (currentNode.Left != null)
+                {
+                    queue.Enqueue(currentNode.Left);
+                }
+                if (currentNode.Right != null)
+                {
+                    queue.Enqueue(currentNode.Right);
+                }
+            }
+        }
+
         private void PrintNode(TreeDSNode node)
         {
             if (console != null)
