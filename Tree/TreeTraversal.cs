@@ -8,30 +8,24 @@ using System.Threading.Tasks;
 
 namespace Datastructure.Tree
 {
-    public class TreeDS
+    public class TreeTraversal
     {
         public TreeDSNode root = null;
         public IConsoleWriter console = null;
 
-        public TreeDS(int rootValue, IConsoleWriter console = null)
+        public TreeTraversal(int rootValue, IConsoleWriter console = null)
         {
 
             this.console = console;
             root = TreeDSNode.Create(rootValue);
         }
 
-        public TreeDS(TreeDSNode rootNode, IConsoleWriter console = null)
+        public TreeTraversal(TreeDSNode rootNode, IConsoleWriter console = null)
         {
             this.console = console;
             if (rootNode == null)
                 throw new NullReferenceException();
             root = rootNode;
-        }
-
-
-        public void AddLeft(int nodeValue, int leftOfValue)
-        {
-            throw new NotImplementedException();
         }
 
         public void PreOrderTraversal()

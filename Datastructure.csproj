@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\IAlgorithm.cs" />
     <Compile Include="Common\MockWriter.cs" />
     <Compile Include="IConsoleWriter.cs" />
     <Compile Include="LinkedList\LinkedListDS.cs" />
@@ -71,8 +72,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tree\Model\TreeDSNode.cs" />
-    <Compile Include="Tree\Test\TreeDSTest.cs" />
-    <Compile Include="Tree\TreeDS.cs" />
+    <Compile Include="Tree\Test\TreeTraversalTest.cs" />
+    <Compile Include="Tree\TreeTraversal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />

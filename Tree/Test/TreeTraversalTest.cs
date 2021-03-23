@@ -11,7 +11,7 @@ namespace Datastructure.Tree.Test
 {
 
     [TestFixture]
-    public class TreeDSTest
+    public class TreeTraversalTest
     {
 
         [Test]
@@ -20,7 +20,7 @@ namespace Datastructure.Tree.Test
             var expectedOutputs = new List<int>() { 1, 2, 4, 5, 3, 6 };
             IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
             TreeDSNode rootNode = GetTree();
-            TreeDS tree = new TreeDS(rootNode, writerMock);
+            TreeTraversal tree = new TreeTraversal(rootNode, writerMock);
             tree.PreOrderTraversal();
         }
 
@@ -30,7 +30,7 @@ namespace Datastructure.Tree.Test
             var expectedOutputs = new List<int>() { 4, 5, 2, 6, 3, 1 };
             IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
             TreeDSNode rootNode = GetTree();
-            TreeDS tree = new TreeDS(rootNode, writerMock);
+            TreeTraversal tree = new TreeTraversal(rootNode, writerMock);
             tree.InOrderTraversal();
         }
 
@@ -40,7 +40,7 @@ namespace Datastructure.Tree.Test
             TreeDSNode rootNode = GetTree();
 
             // finding node which is available in left side of the tree
-            TreeDS tree = new TreeDS(rootNode);
+            TreeTraversal tree = new TreeTraversal(rootNode);
             var actual = tree.GetNodeUsingRecursion(rootNode, 4);
             Assert.AreEqual(actual.Value, 4);
 
@@ -64,7 +64,7 @@ namespace Datastructure.Tree.Test
             var expectedOutputs = new List<int>() { 4, 5, 2, 6, 3, 1 };
             IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
             TreeDSNode rootNode = GetTree();
-            TreeDS tree = new TreeDS(rootNode, writerMock);
+            TreeTraversal tree = new TreeTraversal(rootNode, writerMock);
             tree.PostOrderTraversal();
         }
 
@@ -74,7 +74,7 @@ namespace Datastructure.Tree.Test
             var expectedOutputs = new List<int>() {1,2,3,4,5,6 };
             IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
             TreeDSNode rootNode = GetTree();
-            TreeDS tree = new TreeDS(rootNode, writerMock);
+            TreeTraversal tree = new TreeTraversal(rootNode, writerMock);
             tree.LevelOrderTraversal();
         }
 
