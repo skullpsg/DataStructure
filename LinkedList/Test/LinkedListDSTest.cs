@@ -1,5 +1,7 @@
-﻿using Moq;
+﻿using Datastructure.Common;
+using Moq;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace Datastructure.LinkedList.Test
 {
@@ -9,70 +11,52 @@ namespace Datastructure.LinkedList.Test
     {
 
         [Test]
-        public void LinkedListDSPrint()
+        public void ShouldPrintLinkedList()
         {
+            var expectedOutputs = new List<int>() { 1, 2, 3 };
+            IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
 
-            var seq = new MockSequence();
-
-
-            var writerMock = new Mock<IConsoleWriter>(MockBehavior.Strict);
-            LinkedListDS linkedList = new LinkedListDS(writerMock.Object);
-            linkedList.Add(1);
-            linkedList.Add(2);
-            linkedList.Add(3);
-
-            writerMock.InSequence(seq).Setup(m => m.WriteLine(1));
-            writerMock.InSequence(seq).Setup(m => m.WriteLine(2));
-            writerMock.InSequence(seq).Setup(m => m.WriteLine(3));
+            LinkedListDS linkedList = GetLinkedList(writerMock);
 
             linkedList.Result();
         }
 
 
         [Test]
-        public void Reverse()
+        public void ShouldReverseLinkedList()
         {
 
-            var seq = new MockSequence();
+            var expectedOutputs = new List<int>() { 3, 2, 1 };
+            IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
 
-
-            var writerMock = new Mock<IConsoleWriter>(MockBehavior.Strict);
-            LinkedListDS linkedList = new LinkedListDS(writerMock.Object);
-            linkedList.Add(1);
-            linkedList.Add(2);
-            linkedList.Add(3);
+            LinkedListDS linkedList = GetLinkedList(writerMock);
 
             linkedList.Reverse();
 
-            writerMock.InSequence(seq).Setup(m => m.WriteLine(3));
-            writerMock.InSequence(seq).Setup(m => m.WriteLine(2));
-            writerMock.InSequence(seq).Setup(m => m.WriteLine(1));
-
             linkedList.Result();
         }
 
 
         [Test]
-        public void AddAfterSomeNode()
+        public void ShouldAddNodeAfterGivenValue()
         {
+            var expectedOutputs = new List<int>() { 1, 2, 4, 3 };
+            IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
 
-            var seq = new MockSequence();
+            LinkedListDS linkedList = GetLinkedList(writerMock);
 
+            linkedList.AddNodeAfter(2, 4);
 
-            var writerMock = new Mock<IConsoleWriter>(MockBehavior.Strict);
-            LinkedListDS linkedList = new LinkedListDS(writerMock.Object);
+            linkedList.Result();
+        }
+
+        private LinkedListDS GetLinkedList(IConsoleWriter writerMock)
+        {
+            var linkedList = new LinkedListDS(writerMock);
             linkedList.Add(1);
             linkedList.Add(2);
             linkedList.Add(3);
-
-            linkedList.AddNodeAfter(2,4);
-
-            writerMock.InSequence(seq).Setup(m => m.WriteLine(1));
-            writerMock.InSequence(seq).Setup(m => m.WriteLine(2));
-            writerMock.InSequence(seq).Setup(m => m.WriteLine(4));
-            writerMock.InSequence(seq).Setup(m => m.WriteLine(3));
-
-            linkedList.Result();
+            return linkedList;
         }
 
 

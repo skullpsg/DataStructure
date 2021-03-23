@@ -1,9 +1,11 @@
 ﻿using Datastructure;
+using Datastructure.Common;
 using Datastructure.LinkedList;
 using Datastructure.Tree;
 using Datastructure.Tree.Model;
 using Moq;
 using NUnit.Framework;
+using System.Collections.Generic;
 
 namespace Datastructure.Tree.Test
 {
@@ -13,41 +15,38 @@ namespace Datastructure.Tree.Test
     {
 
         [Test]
-        public void PrintTreeInPreOrder()
+        public void ShouldPrintTreeInPreOrder()
         {
+            var expectedOutputs = new List<int>() { 1, 2, 3 };
+            IConsoleWriter writerMock = MockWriter.GetInstance(expectedOutputs);
 
-            var seq = new MockSequence();
-            TreeDSNode treeNode = TreeDSNode.Create(1);
-
-
-            var writerMock = new Mock<IConsoleWriter>(MockBehavior.Strict);
-            LinkedListDS linkedList = new LinkedListDS(writerMock.Object);
+            LinkedListDS linkedList = new LinkedListDS(writerMock);
             linkedList.Add(1);
             linkedList.Add(2);
             linkedList.Add(3);
-
-            writerMock.InSequence(seq).Setup(m => m.WriteLine(1));
-            writerMock.InSequence(seq).Setup(m => m.WriteLine(2));
-            writerMock.InSequence(seq).Setup(m => m.WriteLine(3));
 
             linkedList.Result();
         }
 
         [Test]
-        public void GetNodeByValue()
+        public void ShouldReturnNodeByValue()
         {
             TreeDSNode rootNode = GetTree();
 
+            // finding node which is available in left side of the tree
             TreeDS tree = new TreeDS(rootNode);
             var actual = tree.GetNodeUsingRecursion(rootNode, 4);
             Assert.AreEqual(actual.Value, 4);
 
+            // finding node which is available in right side of the tree
             var actualNodeFor6 = tree.GetNodeUsingRecursion(rootNode, 6);
             Assert.AreEqual(actualNodeFor6.Value, 6);
 
+            // finding node which is available in root of the tree
             var actualRootNode = tree.GetNodeUsingRecursion(rootNode, 1);
             Assert.AreEqual(actualRootNode.Value, 1);
 
+            // finding node which is not available in the tree
             var nullValueForNotFound = tree.GetNodeUsingRecursion(rootNode, 99);
             Assert.AreEqual(nullValueForNotFound, null);
 

@@ -63,6 +63,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\MockWriter.cs" />
     <Compile Include="IConsoleWriter.cs" />
     <Compile Include="LinkedList\LinkedListDS.cs" />
     <Compile Include="LinkedList\model\LinkedListNode.cs" />
