@@ -36,28 +36,33 @@ namespace Datastructure.Tree.Test
         [Test]
         public void GetNodeByValue()
         {
-            var nodeWithValue4 = TreeDSNode.Create(4);
-            var nodeWithValue5 = TreeDSNode.Create(5);
-            var nodeWithValue6 = TreeDSNode.Create(6);
+            TreeDSNode rootNode = GetTree();
 
-            TreeDSNode nodeWithValue2 = new TreeDSNode(2, nodeWithValue4, nodeWithValue5);
-            TreeDSNode nodeWithValue3 = new TreeDSNode(3, nodeWithValue6, null);
-            TreeDSNode root = new TreeDSNode(1, nodeWithValue2, nodeWithValue3);
+            TreeDS tree = new TreeDS(rootNode);
+            var actual = tree.GetNodeUsingRecursion(rootNode, 4);
+            Assert.AreEqual(actual.Value, 4);
 
-            TreeDS tree = new TreeDS(root);
-            var actual = tree.GetNodeUsingRecursion(root, 4);
-            Assert.AreSame(actual, nodeWithValue4);
+            var actualNodeFor6 = tree.GetNodeUsingRecursion(rootNode, 6);
+            Assert.AreEqual(actualNodeFor6.Value, 6);
 
-            var actualNodeFor6 = tree.GetNodeUsingRecursion(root, 6);
-            Assert.AreSame(actualNodeFor6, nodeWithValue6);
+            var actualRootNode = tree.GetNodeUsingRecursion(rootNode, 1);
+            Assert.AreEqual(actualRootNode.Value, 1);
 
-            var actualRootNode = tree.GetNodeUsingRecursion(root, 1);
-            Assert.AreSame(actualRootNode, root);
-
-            var nullValueForNotFound = tree.GetNodeUsingRecursion(root, 99);
-            Assert.AreSame(nullValueForNotFound, null);
+            var nullValueForNotFound = tree.GetNodeUsingRecursion(rootNode, 99);
+            Assert.AreEqual(nullValueForNotFound, null);
 
         }
 
+        private TreeDSNode GetTree()
+        {
+            TreeDSNode nodeWithValue4, nodeWithValue6, root;
+            nodeWithValue4 = TreeDSNode.Create(4);
+            var nodeWithValue5 = TreeDSNode.Create(5);
+            nodeWithValue6 = TreeDSNode.Create(6);
+            TreeDSNode nodeWithValue2 = new TreeDSNode(2, nodeWithValue4, nodeWithValue5);
+            TreeDSNode nodeWithValue3 = new TreeDSNode(3, nodeWithValue6, null);
+            root = new TreeDSNode(1, nodeWithValue2, nodeWithValue3);
+            return root;
+        }
     }
 }
