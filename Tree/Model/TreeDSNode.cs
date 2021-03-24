@@ -18,6 +18,26 @@ namespace Datastructure.Tree.Model
             this.Right = right;
         }
 
+        public bool isLeftNodeNull()
+        {
+            return this.Left == null;
+        }
+
+        public bool isRightNodeNull()
+        {
+            return this.Right == null;
+        }
+
+        public bool isLeftNodeAvailable()
+        {
+            return this.Left != null;
+        }
+
+        public bool isRightNodeAvailable()
+        {
+            return this.Right != null;
+        }
+
         public static TreeDSNode Create(int value)
         {
             return new TreeDSNode(value, null, null);

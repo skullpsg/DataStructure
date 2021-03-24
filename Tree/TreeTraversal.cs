@@ -36,11 +36,11 @@ namespace Datastructure.Tree
             {
                 var currentNode = (TreeDSNode)stack.Pop();
                 PrintNode(currentNode);
-                if (currentNode.Right != null)
+                if (currentNode.isRightNodeAvailable())
                 {
                     stack.Push(currentNode.Right);
                 }
-                if (currentNode.Left != null)
+                if (currentNode.isLeftNodeAvailable())
                 {
                     stack.Push(currentNode.Left);
                 }
@@ -103,12 +103,12 @@ namespace Datastructure.Tree
                     lastPrint = currentNode.Value;
                     currentNode = null;
                 }
-                else if (currentNode.Left != null && currentNode.Left.Value != lastPrint)
+                else if (currentNode.isLeftNodeAvailable() && currentNode.Left.Value != lastPrint)
                 {
                     stack.Push(currentNode);
                     currentNode = currentNode.Left;
                 }
-                else if (currentNode.Right != null)
+                else if (currentNode.isRightNodeAvailable())
                 {
                     stack.Push(currentNode);
                     currentNode = currentNode.Right;
@@ -130,11 +130,11 @@ namespace Datastructure.Tree
             {
                 var currentNode = (TreeDSNode)queue.Dequeue();
                 PrintNode(currentNode);
-                if (currentNode.Left != null)
+                if (currentNode.isLeftNodeAvailable())
                 {
                     queue.Enqueue(currentNode.Left);
                 }
-                if (currentNode.Right != null)
+                if (currentNode.isRightNodeAvailable())
                 {
                     queue.Enqueue(currentNode.Right);
                 }
@@ -143,6 +143,9 @@ namespace Datastructure.Tree
 
         private void PrintNode(TreeDSNode node)
         {
+            if (node == null)
+                return;
+
             if (console != null)
                 console.WriteLine(node.Value);
             else
