@@ -47,7 +47,7 @@ namespace Datastructure.Tree
             }
         }
 
-        public void InOrderTraversal()
+        public void InOrderTraversal() 
         {
             Stack stack = new Stack();
             var currentNode = this.root;
