@@ -32,30 +32,6 @@ namespace Datastructure.Tree.Test
         }
 
         [Test]
-        public void ShouldReturnNodeByValue()
-        {
-            TreeDSNode rootNode = TreeTestData.GetSimpleTreeRootNode();
-
-            // finding node which is available in left side of the tree
-            TreeTraversal tree = new TreeTraversal(rootNode);
-            var actual = tree.GetNodeUsingRecursion(rootNode, 4);
-            Assert.AreEqual(actual.Value, 4);
-
-            // finding node which is available in right side of the tree
-            var actualNodeFor6 = tree.GetNodeUsingRecursion(rootNode, 6);
-            Assert.AreEqual(actualNodeFor6.Value, 6);
-
-            // finding node which is available in root of the tree
-            var actualRootNode = tree.GetNodeUsingRecursion(rootNode, 1);
-            Assert.AreEqual(actualRootNode.Value, 1);
-
-            // finding node which is not available in the tree
-            var nullValueForNotFound = tree.GetNodeUsingRecursion(rootNode, 99);
-            Assert.AreEqual(nullValueForNotFound, null);
-
-        }
-
-        [Test]
         public void ShouldPrintTreeInPostOrder()
         {
             var expectedOutputs = new List<int>() { 4, 5, 2, 6, 3, 1 };

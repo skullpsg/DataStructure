@@ -63,28 +63,6 @@ namespace Datastructure.Tree
             }
         }
 
-        public TreeDSNode GetNodeUsingRecursion(TreeDSNode root, int valueToFind)
-        {
-
-            if (root.Value == valueToFind)
-                return root;
-
-            if (root.Left != null)
-            {
-                var node = GetNodeUsingRecursion(root.Left, valueToFind);
-                if (node != null)
-                    return node;
-            }
-            if (root.Right != null)
-            {
-                var node = GetNodeUsingRecursion(root.Right, valueToFind);
-                if (node != null)
-                    return node;
-            }
-
-            return null;
-        }
-
         public void PostOrderTraversal()
         {
             var currentNode = this.root;

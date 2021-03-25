@@ -1,6 +1,6 @@
 ﻿using Datastructure.Common;
 using Datastructure.Tree.Model;
-
+using System.Collections.Generic;
 
 namespace Datastructure.Tree.Problems
 {
@@ -38,7 +38,28 @@ namespace Datastructure.Tree.Problems
         }
         public TreeDSNode NonRecursion(TreeDSNode root)
         {
-            return null;
+            TreeDSNode currentNode = null;
+            TreeDSNode expectedNode = null;
+            var queue = new Queue<TreeDSNode>();
+            queue.Enqueue(root);
+            while (queue.Count > 0)
+            {
+                currentNode = queue.Dequeue();
+                if (currentNode.Value == valueToFind)
+                {
+                    expectedNode = currentNode;
+                    break;
+                }
+                if (currentNode.isLeftNodeAvailable())
+                {
+                    queue.Enqueue(currentNode.Left);
+                }
+                if (currentNode.isRightNodeAvailable())
+                {
+                    queue.Enqueue(currentNode.Right);
+                }
+            }
+            return expectedNode;
         }
 
 
