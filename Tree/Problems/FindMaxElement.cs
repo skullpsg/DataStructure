@@ -2,9 +2,6 @@
 using Datastructure.Tree.Model;
 using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Datastructure.Tree.Problems
 {
@@ -20,7 +17,32 @@ namespace Datastructure.Tree.Problems
 
         public TreeDSNode NonRecursion(TreeDSNode root)
         {
-            throw new NotImplementedException();
+            if (root == null)
+            {
+                throw new NullReferenceException();
+            }
+
+            TreeDSNode currentNode = null;
+            var maxNode = root;
+            var queue = new Queue<TreeDSNode>();
+            queue.Enqueue(root);
+            while (queue.Count > 0)
+            {
+                currentNode = queue.Dequeue();
+                if (currentNode.Value > maxNode.Value)
+                {
+                    maxNode = currentNode;
+                }
+                if (currentNode.isLeftNodeAvailable())
+                {
+                    queue.Enqueue(currentNode.Left);
+                }
+                if (currentNode.isRightNodeAvailable())
+                {
+                    queue.Enqueue(currentNode.Right);
+                }
+            }
+            return maxNode;
         }
 
         public TreeDSNode Recursion(TreeDSNode root)
