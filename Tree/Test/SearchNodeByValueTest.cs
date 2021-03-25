@@ -6,7 +6,7 @@ using NUnit.Framework;
 namespace Datastructure.Tree.Test
 {
     [TestFixture]
-    public class SearchNodeTest
+    public class SearchNodeByValueTest
     {
         [Test]
         public void ShouldReturnNodeIfNodeFound()

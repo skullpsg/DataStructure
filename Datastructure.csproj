@@ -76,7 +76,7 @@
     <Compile Include="Tree\Problems\SearchNodesByValue.cs" />
     <Compile Include="Tree\Problems\ZigZagTraversal.cs" />
     <Compile Include="Tree\Test\FindMaxNodeTest.cs" />
-    <Compile Include="Tree\Test\SearchNode.cs" />
+    <Compile Include="Tree\Test\SearchNodeByValueTest.cs" />
     <Compile Include="Tree\Test\TreeTestData.cs" />
     <Compile Include="Tree\Test\TreeTraversalTest.cs" />
     <Compile Include="Tree\Test\ZigzagTraversalTest.cs" />
