@@ -13,23 +13,25 @@ namespace Datastructure.Tree.Test
     [TestFixture]
     public class FindMaxNodeTest
     {
+
         [Test]
         public void ShouldReturnMaxNodeInRecursion()
         {
 
-            TreeDSNode rootNode = TreeTestData.GetSimpleTreeRootNode();
+            TreeDSNode rootNode = TreeTestData.GetComplexTreeRootNode();
             FindMaxElement findMaxNode = new FindMaxElement();
             var maxNode = findMaxNode.Recursion(rootNode);
-            Assert.AreEqual(6, maxNode.Value);
+            Assert.AreEqual(8, maxNode.Value);
         }
 
         [Test]
         public void ShouldReturnMaxNodeInNonRecursion()
         {
-            TreeDSNode rootNode = TreeTestData.GetSimpleTreeRootNode();
+            TreeDSNode rootNode = TreeTestData.GetComplexTreeRootNode();
             FindMaxElement findMaxNode = new FindMaxElement();
             var maxNode = findMaxNode.NonRecursion(rootNode);
-            Assert.AreEqual(6, maxNode.Value);
+            Assert.AreEqual(8, maxNode.Value);
         }
+        
     }
 }
