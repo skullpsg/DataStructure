@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Datastructure.Common
 {
-    interface IAlgorithm<T>
+    interface IAlgorithm<TIn,TOut>
     {
-        T Recursion(T root);
-        T NonRecursion(T root);
+        TOut Recursion(TIn root);
+        TOut NonRecursion(TIn root);
     }
 }

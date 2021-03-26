@@ -15,7 +15,7 @@ namespace Datastructure.Tree.Test
             var rootNode = TreeTestData.GetSimpleTreeRootNode();
 
             // finding node which is available in left side of the tree
-            IAlgorithm<TreeDSNode> searchNodeByValue = new SearchNodesByValue(4);
+            IAlgorithm<TreeDSNode, TreeDSNode> searchNodeByValue = new SearchNodesByValue(4);
             var actual = searchNodeByValue.Recursion(rootNode);
             Assert.AreEqual(actual.Value, 4);
 
@@ -43,7 +43,7 @@ namespace Datastructure.Tree.Test
             var rootNode = TreeTestData.GetSimpleTreeRootNode();
 
             // finding node which is available in left side of the tree
-            IAlgorithm<TreeDSNode> searchNodeByValue = new SearchNodesByValue(4);
+            IAlgorithm<TreeDSNode, TreeDSNode> searchNodeByValue = new SearchNodesByValue(4);
             var actual = searchNodeByValue.NonRecursion(rootNode);
             Assert.AreEqual(actual.Value, 4);
 

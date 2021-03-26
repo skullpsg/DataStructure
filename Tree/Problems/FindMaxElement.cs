@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace Datastructure.Tree.Problems
 {
-    public class FindMaxElement : IAlgorithm<TreeDSNode>
+    public class FindMaxElement : IAlgorithm<TreeDSNode,TreeDSNode>
     {
         public IConsoleWriter console = null;
 

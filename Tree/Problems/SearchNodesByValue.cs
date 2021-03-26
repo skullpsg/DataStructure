@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 namespace Datastructure.Tree.Problems
 {
-    public class SearchNodesByValue : IAlgorithm<TreeDSNode>
+    public class SearchNodesByValue : IAlgorithm<TreeDSNode, TreeDSNode>
     {
         public int valueToFind { get; set; } = 0;
         public SearchNodesByValue(int valueToFind)
