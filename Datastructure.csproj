@@ -73,10 +73,12 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tree\Model\TreeDSNode.cs" />
     <Compile Include="Tree\Problems\FindMaxElement.cs" />
+    <Compile Include="Tree\Problems\HeightOfTree.cs" />
     <Compile Include="Tree\Problems\LevelOrderTraversalInReverse.cs" />
     <Compile Include="Tree\Problems\SearchNodesByValue.cs" />
     <Compile Include="Tree\Problems\TreeSize.cs" />
     <Compile Include="Tree\Problems\ZigZagTraversal.cs" />
+    <Compile Include="Tree\Test\HeightOfTreeTest.cs" />
     <Compile Include="Tree\Test\PrintLevelOrderTraversalInReverseTest.cs" />
     <Compile Include="Tree\Test\TreeSizeTest.cs" />
     <Compile Include="Tree\Test\FindMaxNodeTest.cs" />
