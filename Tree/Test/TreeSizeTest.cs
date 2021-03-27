@@ -19,7 +19,7 @@ namespace Datastructure.Tree.Test
 
             TreeDSNode rootNode = TreeTestData.GetSimpleTreeRootNode();
             var treeSize = new TreeSize();
-            var actualSize = treeSize.Recursion(rootNode);
+            var actualSize = treeSize.UsingRecursion(rootNode);
             Assert.AreEqual(6, actualSize);
         }
 
@@ -28,7 +28,7 @@ namespace Datastructure.Tree.Test
         {
             TreeDSNode rootNode = TreeTestData.GetSimpleTreeRootNode();
             var treeSize = new TreeSize();
-            var actualSize = treeSize.NonRecursion(rootNode);
+            var actualSize = treeSize.UsingNonRecursion(rootNode);
             Assert.AreEqual(6, actualSize);
         }
     }

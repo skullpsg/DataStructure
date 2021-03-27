@@ -10,7 +10,7 @@ namespace Datastructure.Tree.Problems
 {
     class TreeSize : IAlgorithm<TreeDSNode, int>
     {
-        public int NonRecursion(TreeDSNode root)
+        public int UsingNonRecursion(TreeDSNode root)
         {
             var currentNode = root;
             int size = 0;
@@ -35,12 +35,12 @@ namespace Datastructure.Tree.Problems
             return size;
         }
 
-        public int Recursion(TreeDSNode root)
+        public int UsingRecursion(TreeDSNode root)
         {
             if (root == null)
                 return 0;
 
-            return Recursion(root.Left) + Recursion(root.Right) + 1;
+            return UsingRecursion(root.Left) + UsingRecursion(root.Right) + 1;
         }
     }
 }

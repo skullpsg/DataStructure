@@ -13,7 +13,7 @@ namespace Datastructure.Tree.Problems
         }
 
 
-        public TreeDSNode Recursion(TreeDSNode root)
+        public TreeDSNode UsingRecursion(TreeDSNode root)
         {
             if (root == null)
                 return null;
@@ -23,20 +23,20 @@ namespace Datastructure.Tree.Problems
 
             if (root.isLeftNodeAvailable())
             {
-                var node = Recursion(root.Left);
+                var node = UsingRecursion(root.Left);
                 if (node != null)
                     return node;
             }
             if (root.isRightNodeAvailable())
             {
-                var node = Recursion(root.Right);
+                var node = UsingRecursion(root.Right);
                 if (node != null)
                     return node;
             }
 
             return null;
         }
-        public TreeDSNode NonRecursion(TreeDSNode root)
+        public TreeDSNode UsingNonRecursion(TreeDSNode root)
         {
             TreeDSNode currentNode = null;
             TreeDSNode expectedNode = null;

@@ -15,7 +15,7 @@ namespace Datastructure.Tree.Problems
         }
 
 
-        public TreeDSNode NonRecursion(TreeDSNode root)
+        public TreeDSNode UsingNonRecursion(TreeDSNode root)
         {
             if (root == null)
             {
@@ -45,7 +45,7 @@ namespace Datastructure.Tree.Problems
             return maxNode;
         }
 
-        public TreeDSNode Recursion(TreeDSNode root)
+        public TreeDSNode UsingRecursion(TreeDSNode root)
         {
             TreeDSNode maxNode = root;
             TreeDSNode leftMaxNode = null, rightMaxNode = null;
@@ -53,13 +53,13 @@ namespace Datastructure.Tree.Problems
             if (root.isLeftNodeNull() && root.isRightNodeNull()) return root;
             if (root.isLeftNodeAvailable())
             {
-                leftMaxNode = Recursion(root.Left);
+                leftMaxNode = UsingRecursion(root.Left);
                 if (leftMaxNode?.Value > maxNode.Value)
                     maxNode = leftMaxNode;
             }
             if (root.isRightNodeAvailable())
             {
-                rightMaxNode = Recursion(root.Right);
+                rightMaxNode = UsingRecursion(root.Right);
                 if (rightMaxNode?.Value > maxNode.Value)
                     maxNode = rightMaxNode;
             }

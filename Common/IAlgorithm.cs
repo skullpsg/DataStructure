@@ -8,7 +8,7 @@ namespace Datastructure.Common
 {
     interface IAlgorithm<TIn,TOut>
     {
-        TOut Recursion(TIn root);
-        TOut NonRecursion(TIn root);
+        TOut UsingRecursion(TIn root);
+        TOut UsingNonRecursion(TIn root);
     }
 }

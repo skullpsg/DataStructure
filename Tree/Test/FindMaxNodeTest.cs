@@ -20,7 +20,7 @@ namespace Datastructure.Tree.Test
 
             TreeDSNode rootNode = TreeTestData.GetComplexTreeRootNode();
             FindMaxElement findMaxNode = new FindMaxElement();
-            var maxNode = findMaxNode.Recursion(rootNode);
+            var maxNode = findMaxNode.UsingRecursion(rootNode);
             Assert.AreEqual(8, maxNode.Value);
         }
 
@@ -29,7 +29,7 @@ namespace Datastructure.Tree.Test
         {
             TreeDSNode rootNode = TreeTestData.GetComplexTreeRootNode();
             FindMaxElement findMaxNode = new FindMaxElement();
-            var maxNode = findMaxNode.NonRecursion(rootNode);
+            var maxNode = findMaxNode.UsingNonRecursion(rootNode);
             Assert.AreEqual(8, maxNode.Value);
         }
         

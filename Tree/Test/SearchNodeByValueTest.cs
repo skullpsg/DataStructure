@@ -16,22 +16,22 @@ namespace Datastructure.Tree.Test
 
             // finding node which is available in left side of the tree
             IAlgorithm<TreeDSNode, TreeDSNode> searchNodeByValue = new SearchNodesByValue(4);
-            var actual = searchNodeByValue.Recursion(rootNode);
+            var actual = searchNodeByValue.UsingRecursion(rootNode);
             Assert.AreEqual(actual.Value, 4);
 
             // finding node which is available in right side of the tree
             ((SearchNodesByValue)searchNodeByValue).valueToFind = 6;
-            var actualNodeFor6 = searchNodeByValue.Recursion(rootNode);
+            var actualNodeFor6 = searchNodeByValue.UsingRecursion(rootNode);
             Assert.AreEqual(actualNodeFor6.Value, 6);
 
             // finding node which is available in root of the tree
             ((SearchNodesByValue)searchNodeByValue).valueToFind = 1;
-            var actualRootNode = searchNodeByValue.Recursion(rootNode);
+            var actualRootNode = searchNodeByValue.UsingRecursion(rootNode);
             Assert.AreEqual(actualRootNode.Value, 1);
 
             // finding node which is not available in the tree
             ((SearchNodesByValue)searchNodeByValue).valueToFind = 99;
-            var nullValueForNotFound = searchNodeByValue.Recursion(rootNode);
+            var nullValueForNotFound = searchNodeByValue.UsingRecursion(rootNode);
             Assert.AreEqual(nullValueForNotFound, null);
 
         }
@@ -44,22 +44,22 @@ namespace Datastructure.Tree.Test
 
             // finding node which is available in left side of the tree
             IAlgorithm<TreeDSNode, TreeDSNode> searchNodeByValue = new SearchNodesByValue(4);
-            var actual = searchNodeByValue.NonRecursion(rootNode);
+            var actual = searchNodeByValue.UsingNonRecursion(rootNode);
             Assert.AreEqual(actual.Value, 4);
 
             // finding node which is available in right side of the tree
             ((SearchNodesByValue)searchNodeByValue).valueToFind = 6;
-            var actualNodeFor6 = searchNodeByValue.NonRecursion(rootNode);
+            var actualNodeFor6 = searchNodeByValue.UsingNonRecursion(rootNode);
             Assert.AreEqual(actualNodeFor6.Value, 6);
 
             // finding node which is available in root of the tree
             ((SearchNodesByValue)searchNodeByValue).valueToFind = 1;
-            var actualRootNode = searchNodeByValue.NonRecursion(rootNode);
+            var actualRootNode = searchNodeByValue.UsingNonRecursion(rootNode);
             Assert.AreEqual(actualRootNode.Value, 1);
 
             // finding node which is not available in the tree
             ((SearchNodesByValue)searchNodeByValue).valueToFind = 99;
-            var nullValueForNotFound = searchNodeByValue.NonRecursion(rootNode);
+            var nullValueForNotFound = searchNodeByValue.UsingNonRecursion(rootNode);
             Assert.AreEqual(nullValueForNotFound, null);
 
         }
