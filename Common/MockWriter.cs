@@ -19,5 +19,15 @@ namespace Datastructure.Common
             }
             return writerMock.Object;
         }
+        public static IConsoleWriter GetInstanceForString(List<String> expectedOutputs)
+        {
+            var writerMock = new Mock<IConsoleWriter>(MockBehavior.Strict);
+            var seq = new MockSequence();
+            foreach (var expectedOutput in expectedOutputs)
+            {
+                writerMock.InSequence(seq).Setup(m => m.WriteLine(expectedOutput));
+            }
+            return writerMock.Object;
+        }
     }
 }
