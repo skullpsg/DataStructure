@@ -46,6 +46,25 @@ namespace Datastructure.Tree.Test
             return root;
         }
 
+        // Tree structure
+        //        70
+        //    80       47
+        //  90   108   99
+        //     54 77
+        public static TreeDSNode GetRootNodeOfComplexTreeWithHighervalue()
+        {
+            TreeDSNode nodeWithValue4, nodeWithValue7, nodeWithValue8, nodeWithValue6, root;
+            nodeWithValue4 = TreeDSNode.Create(90);
+            nodeWithValue7 = TreeDSNode.Create(54);
+            nodeWithValue8 = TreeDSNode.Create(77);
+            var nodeWithValue5 = TreeDSNode.Create(108);
+            nodeWithValue6 = new TreeDSNode(99, nodeWithValue7, nodeWithValue8);
+            TreeDSNode nodeWithValue2 = new TreeDSNode(80, nodeWithValue4, nodeWithValue5);
+            TreeDSNode nodeWithValue3 = new TreeDSNode(47, nodeWithValue6, null);
+            root = new TreeDSNode(70, nodeWithValue2, nodeWithValue3);
+            return root;
+        }
+
 
         // Tree structure (left splay tree)
         //        1
