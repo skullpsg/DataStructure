@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Datastructure.Tree.Test
+namespace Datastructure.Tree.Problems
 {
     public class DiameterOfTree
     {
