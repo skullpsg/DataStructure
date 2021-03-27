@@ -72,33 +72,33 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tree\Model\TreeDSNode.cs" />
-    <Compile Include="Tree\Problems\DeepestNodeOfTree.cs" />
-    <Compile Include="Tree\Problems\FindMaxElement.cs" />
-    <Compile Include="Tree\Problems\HeightOfTree.cs" />
-    <Compile Include="Tree\Problems\LevelOrderTraversalInReverse.cs" />
-    <Compile Include="Tree\Problems\MaxSumInLevel.cs" />
-    <Compile Include="Tree\Problems\PrintingTreeNodesFromRootToLeaf.cs" />
-    <Compile Include="Tree\Problems\StructuralIdentification.cs" />
-    <Compile Include="Tree\Problems\TreeNodesType.cs" />
-    <Compile Include="Tree\Problems\SearchNodesByValue.cs" />
-    <Compile Include="Tree\Problems\TreeSize.cs" />
-    <Compile Include="Tree\Problems\ZigZagTraversal.cs" />
-    <Compile Include="Tree\Problems\DiameterOfTree.cs" />
-    <Compile Include="Tree\Test\DeepestNodeOfTreeTest.cs" />
-    <Compile Include="Tree\Test\DiameterOfTreeTest.cs" />
-    <Compile Include="Tree\Test\HeightOfTreeTest.cs" />
-    <Compile Include="Tree\Test\MaxSumInLevelOfTreeTest.cs" />
-    <Compile Include="Tree\Test\PrintingTreeNodesFromRootToLeafTest.cs" />
-    <Compile Include="Tree\Test\PrintLevelOrderTraversalInReverseTest.cs" />
-    <Compile Include="Tree\Test\StructuralIdentificationTest.cs" />
-    <Compile Include="Tree\Test\TreeNodesTypeTest.cs" />
-    <Compile Include="Tree\Test\TreeSizeTest.cs" />
-    <Compile Include="Tree\Test\FindMaxNodeTest.cs" />
-    <Compile Include="Tree\Test\SearchNodeByValueTest.cs" />
-    <Compile Include="Tree\Test\TreeTestData.cs" />
-    <Compile Include="Tree\Test\TreeTraversalTest.cs" />
-    <Compile Include="Tree\Test\ZigzagTraversalTest.cs" />
-    <Compile Include="Tree\TreeTraversal.cs" />
+    <Compile Include="Tree\Problems\DeepestModeOfTree\DeepestNodeOfTree.cs" />
+    <Compile Include="Tree\Problems\FindMaxElement\FindMaxElement.cs" />
+    <Compile Include="Tree\Problems\HeightOfTree\HeightOfTree.cs" />
+    <Compile Include="Tree\Problems\LevelOrderTraversalInReverse\LevelOrderTraversalInReverse.cs" />
+    <Compile Include="Tree\Problems\MaxSumInLevel\MaxSumInLevel.cs" />
+    <Compile Include="Tree\Problems\PrintingTreeNodeFromRootToLeaf\PrintingTreeNodesFromRootToLeaf.cs" />
+    <Compile Include="Tree\Problems\StructuralIdentification\StructuralIdentification.cs" />
+    <Compile Include="Tree\Problems\TreeNodesType\TreeNodesType.cs" />
+    <Compile Include="Tree\Problems\SearchNodesByValue\SearchNodesByValue.cs" />
+    <Compile Include="Tree\Problems\TreeSize\TreeSize.cs" />
+    <Compile Include="Tree\Problems\ZigZagTraversal\ZigZagTraversal.cs" />
+    <Compile Include="Tree\Problems\DiameterOfTree\DiameterOfTree.cs" />
+    <Compile Include="Tree\Problems\DeepestModeOfTree\DeepestNodeOfTreeTest.cs" />
+    <Compile Include="Tree\Problems\DiameterOfTree\DiameterOfTreeTest.cs" />
+    <Compile Include="Tree\Problems\HeightOfTree\HeightOfTreeTest.cs" />
+    <Compile Include="Tree\Problems\MaxSumInLevel\MaxSumInLevelOfTreeTest.cs" />
+    <Compile Include="Tree\Problems\PrintingTreeNodeFromRootToLeaf\PrintingTreeNodesFromRootToLeafTest.cs" />
+    <Compile Include="Tree\Problems\LevelOrderTraversalInReverse\PrintLevelOrderTraversalInReverseTest.cs" />
+    <Compile Include="Tree\Problems\StructuralIdentification\StructuralIdentificationTest.cs" />
+    <Compile Include="Tree\Problems\TreeNodesType\TreeNodesTypeTest.cs" />
+    <Compile Include="Tree\Problems\TreeSize\TreeSizeTest.cs" />
+    <Compile Include="Tree\Problems\FindMaxElement\FindMaxNodeTest.cs" />
+    <Compile Include="Tree\Problems\SearchNodesByValue\SearchNodeByValueTest.cs" />
+    <Compile Include="Tree\Problems\Test\Data\TreeTestData.cs" />
+    <Compile Include="Tree\Problems\TreeTraversal\TreeTraversalTest.cs" />
+    <Compile Include="Tree\Problems\ZigZagTraversal\ZigzagTraversalTest.cs" />
+    <Compile Include="Tree\Problems\TreeTraversal\TreeTraversal.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
@@ -107,7 +107,6 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Error\" />
-    <Folder Include="Tree\Test\Data\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
