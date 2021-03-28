@@ -79,6 +79,8 @@
     <Compile Include="Tree\Problems\HeightOfTree\HeightOfTree.cs" />
     <Compile Include="Tree\Problems\LevelOrderTraversalInReverse\LevelOrderTraversalInReverse.cs" />
     <Compile Include="Tree\Problems\MaxSumInLevel\MaxSumInLevel.cs" />
+    <Compile Include="Tree\Problems\MirrorImageOfTree\MirrorImageOfTree.cs" />
+    <Compile Include="Tree\Problems\MirrorImageOfTree\MirrorImageOfTreeTest.cs" />
     <Compile Include="Tree\Problems\PrintingTreeNodeFromRootToLeaf\PrintingTreeNodesFromRootToLeaf.cs" />
     <Compile Include="Tree\Problems\StructuralIdentification\StructuralIdentification.cs" />
     <Compile Include="Tree\Problems\TreeNodesType\TreeNodesType.cs" />

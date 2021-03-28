@@ -2,7 +2,7 @@
 using Datastructure.Tree.Problems.Test.Data;
 using NUnit.Framework;
 
-namespace Datastructure.Tree.Problems.StructuralIdentification
+namespace Datastructure.Tree.Problems.StructuralIdentificationNS
 {
     public class StructuralIdentificationTest
     {

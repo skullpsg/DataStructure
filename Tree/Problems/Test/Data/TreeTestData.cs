@@ -65,6 +65,26 @@ namespace Datastructure.Tree.Problems.Test.Data
             return root;
         }
 
+        // Tree structure
+        //        1
+        //     3      2
+        //      6   5    4
+        //              8  7
+        public static TreeDSNode GetRootNodeOfComplexTreeMirror()
+        {
+            TreeDSNode nodeWithValue4, nodeWithValue7, nodeWithValue8, root;
+            nodeWithValue4 = TreeDSNode.Create(4);
+            nodeWithValue7 = TreeDSNode.Create(7);
+            nodeWithValue8 = TreeDSNode.Create(8);
+            var nodeWithValue6 = TreeDSNode.Create(6);
+            var nodeWithValue5 = new TreeDSNode(5, nodeWithValue8, nodeWithValue7);
+            TreeDSNode nodeWithValue2 = new TreeDSNode(2, nodeWithValue5, nodeWithValue4);
+            TreeDSNode nodeWithValue3 = new TreeDSNode(3, null, nodeWithValue6);
+            root = new TreeDSNode(1, nodeWithValue3, nodeWithValue2);
+            return root;
+        }
+
+
 
         // Tree structure (left splay tree)
         //        1
