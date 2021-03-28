@@ -34,12 +34,12 @@ namespace Datastructure.Tree.Problems.Test.Data
         //     7 8
         public static TreeDSNode GetComplexTreeRootNode()
         {
-            TreeDSNode nodeWithValue4, nodeWithValue7, nodeWithValue8, nodeWithValue6, root;
+            TreeDSNode nodeWithValue4, nodeWithValue7, nodeWithValue8, root;
             nodeWithValue4 = TreeDSNode.Create(4);
             nodeWithValue7 = TreeDSNode.Create(7);
             nodeWithValue8 = TreeDSNode.Create(8);
-            var nodeWithValue5 = TreeDSNode.Create(5);
-            nodeWithValue6 = new TreeDSNode(6, nodeWithValue7, nodeWithValue8);
+            var nodeWithValue6 = TreeDSNode.Create(6);
+            var nodeWithValue5 = new TreeDSNode(5, nodeWithValue7, nodeWithValue8);
             TreeDSNode nodeWithValue2 = new TreeDSNode(2, nodeWithValue4, nodeWithValue5);
             TreeDSNode nodeWithValue3 = new TreeDSNode(3, nodeWithValue6, null);
             root = new TreeDSNode(1, nodeWithValue2, nodeWithValue3);
