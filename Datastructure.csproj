@@ -83,6 +83,8 @@
     <Compile Include="Tree\Problems\MirrorImageOfTree\MirrorImageOfTreeTest.cs" />
     <Compile Include="Tree\Problems\PrintingTreeNodeFromRootToLeaf\PrintingTreeNodesFromRootToLeaf.cs" />
     <Compile Include="Tree\Problems\StructuralIdentification\StructuralIdentification.cs" />
+    <Compile Include="Tree\Problems\SumAllNodesInTree\SumAllNodesInTree.cs" />
+    <Compile Include="Tree\Problems\SumAllNodesInTree\SumAllNodesInTest.cs" />
     <Compile Include="Tree\Problems\TreeNodesType\TreeNodesType.cs" />
     <Compile Include="Tree\Problems\SearchNodesByValue\SearchNodesByValue.cs" />
     <Compile Include="Tree\Problems\TreeSize\TreeSize.cs" />
