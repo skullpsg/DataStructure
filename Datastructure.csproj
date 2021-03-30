@@ -77,6 +77,8 @@
     <Compile Include="Tree\Problems\ExistenceOfSumInPath\ExistenceOfSumInPathOfTreeTest.cs" />
     <Compile Include="Tree\Problems\FindMaxElement\FindMaxElement.cs" />
     <Compile Include="Tree\Problems\HeightOfTree\HeightOfTree.cs" />
+    <Compile Include="Tree\Problems\LeastCommonAncestor\LeastCommonAncestorTest.cs" />
+    <Compile Include="Tree\Problems\LeastCommonAncestor\LeastCommonAncestor.cs" />
     <Compile Include="Tree\Problems\LevelOrderTraversalInReverse\LevelOrderTraversalInReverse.cs" />
     <Compile Include="Tree\Problems\MaxSumInLevel\MaxSumInLevel.cs" />
     <Compile Include="Tree\Problems\MirrorImageOfTree\MirrorImageOfTree.cs" />

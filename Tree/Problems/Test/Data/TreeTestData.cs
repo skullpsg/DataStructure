@@ -85,6 +85,32 @@ namespace Datastructure.Tree.Problems.Test.Data
         }
 
 
+        // Tree structure
+        //        1
+        //    2       3
+        //  4    5       10
+        // 6 7  8  9         11
+        //                 12
+        public static TreeDSNode GetComplexTreeRootNodeWith12Nodes()
+        {
+            TreeDSNode nodeWithValue4, nodeWithValue11, nodeWithValue10, root;
+            TreeDSNode nodeWithValue7 = TreeDSNode.Create(7);
+            TreeDSNode nodeWithValue8 = TreeDSNode.Create(8);
+            TreeDSNode nodeWithValue9 = TreeDSNode.Create(9);
+            TreeDSNode nodeWithValue12 = TreeDSNode.Create(12);
+
+            nodeWithValue11 = new TreeDSNode(11, nodeWithValue12, null);
+            nodeWithValue10 = new TreeDSNode(10, null, nodeWithValue11);
+            var nodeWithValue6 = TreeDSNode.Create(6);
+            nodeWithValue4 = new TreeDSNode(4, nodeWithValue6, nodeWithValue7);
+            var nodeWithValue5 = new TreeDSNode(5, nodeWithValue8, nodeWithValue9);
+            TreeDSNode nodeWithValue2 = new TreeDSNode(2, nodeWithValue4, nodeWithValue5);
+            TreeDSNode nodeWithValue3 = new TreeDSNode(3, null, nodeWithValue10);
+            root = new TreeDSNode(1, nodeWithValue2, nodeWithValue3);
+            return root;
+        }
+
+
 
         // Tree structure (left splay tree)
         //        1
