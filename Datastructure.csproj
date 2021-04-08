@@ -72,6 +72,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tree\Model\TreeDSNode.cs" />
+    <Compile Include="Tree\Problems\ConstructingBinaryTree\ConstructBinaryTree.cs" />
+    <Compile Include="Tree\Problems\ConstructingBinaryTree\ConstructBinaryTreeTest.cs" />
     <Compile Include="Tree\Problems\DeepestModeOfTree\DeepestNodeOfTree.cs" />
     <Compile Include="Tree\Problems\ExistenceOfSumInPath\ExistenceOfSumInPathOfTree.cs" />
     <Compile Include="Tree\Problems\ExistenceOfSumInPath\ExistenceOfSumInPathOfTreeTest.cs" />

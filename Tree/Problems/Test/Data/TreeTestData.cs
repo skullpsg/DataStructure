@@ -32,6 +32,8 @@ namespace Datastructure.Tree.Problems.Test.Data
         //    2       3
         //  4   5   6
         //     7 8
+        // inOrder : 4, 2, 7, 5, 8, 1, 6, 3
+        // preOrder : 1, 2, 4, 5, 7, 8, 3, 6
         public static TreeDSNode GetComplexTreeRootNode()
         {
             TreeDSNode nodeWithValue4, nodeWithValue7, nodeWithValue8, root;
