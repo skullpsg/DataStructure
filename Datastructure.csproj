@@ -63,6 +63,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Array\Problem\Sort3Digits\Sort3DigitsTest.cs" />
+    <Compile Include="Array\Problem\Sort3Digits\Sort3Digits.cs" />
     <Compile Include="Common\IAlgorithm.cs" />
     <Compile Include="Common\MockWriter.cs" />
     <Compile Include="IConsoleWriter.cs" />
@@ -116,6 +118,7 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Array\Model\" />
     <Folder Include="Error\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
