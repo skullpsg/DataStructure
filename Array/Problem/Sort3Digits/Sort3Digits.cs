@@ -30,7 +30,7 @@ namespace Datastructure.Array.Problem.Sort3Digits
             int mid = 0;
             int high = array.Length - 1;
 
-            while (mid < high)
+            while (mid <= high)
             {
                 if (array[mid] > array[high])
                 {
@@ -40,7 +40,7 @@ namespace Datastructure.Array.Problem.Sort3Digits
                 {
                     swap(low++, mid++);
                 }
-                else if (array[mid] == array[high])
+                else if (array[mid] == array[high] && array[mid] == 2)
                 {
                     high--;
                 }

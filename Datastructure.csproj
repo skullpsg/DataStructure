@@ -74,6 +74,8 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Tree\Model\TreeDSNode.cs" />
+    <Compile Include="Tree\Problems\BottomViewOfTree\BottomViewOfTree.cs" />
+    <Compile Include="Tree\Problems\BottomViewOfTree\BottomViewOfTreeTest.cs" />
     <Compile Include="Tree\Problems\ConstructingBinaryTree\ConstructBinaryTree.cs" />
     <Compile Include="Tree\Problems\ConstructingBinaryTree\ConstructBinaryTreeTest.cs" />
     <Compile Include="Tree\Problems\DeepestModeOfTree\DeepestNodeOfTree.cs" />
@@ -120,6 +122,8 @@
   <ItemGroup>
     <Folder Include="Array\Model\" />
     <Folder Include="Error\" />
+    <Folder Include="Queue\" />
+    <Folder Include="Stack\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
