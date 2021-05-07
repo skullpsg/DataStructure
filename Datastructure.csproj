@@ -63,8 +63,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Array\Problem\2Sum\2SumTest.cs" />
     <Compile Include="Array\Problem\Sort3Digits\Sort3DigitsTest.cs" />
     <Compile Include="Array\Problem\Sort3Digits\Sort3Digits.cs" />
+    <Compile Include="Array\Problem\2Sum\TwoSum.cs" />
     <Compile Include="Common\IAlgorithm.cs" />
     <Compile Include="Common\MockWriter.cs" />
     <Compile Include="IConsoleWriter.cs" />
