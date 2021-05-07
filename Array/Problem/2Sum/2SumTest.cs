@@ -20,5 +20,16 @@ namespace Datastructure.Array.Problem._2Sum
             var actualResult = twoSum.GetSum(nums, target);
             Assert.AreEqual(expectedResult, actualResult);
         }
+
+        [Test]
+        public void ShouldReturnIndexesWhenCallingSumUsingHash()
+        {
+            var nums = new int[] { 2, 7, 11, 15 };
+            TwoSum twoSum = new TwoSum();
+            int target = 9;
+            var expectedResult = new int[] { 0, 1 };
+            var actualResult = twoSum.GetSumUsingHash(nums, target);
+            Assert.AreEqual(expectedResult, actualResult);
+        }
     }
 }

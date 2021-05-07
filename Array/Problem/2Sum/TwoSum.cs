@@ -23,5 +23,21 @@ namespace Datastructure.Array.Problem
 
             return null;
         }
+
+        public int[] GetSumUsingHash(int[] nums, int target) {
+            var ramainingsDict = new Dictionary<int, int>();
+            for (int index = 0; index < nums.Count(); index++)
+            {
+                var current = nums[index];
+                int remaining = target - nums[index];
+                if (ramainingsDict.ContainsKey(current))
+                {
+                    int oldIndex = ramainingsDict[current];
+                    return new int[] { oldIndex, index };
+                }
+                ramainingsDict.Add(remaining, index);
+            }
+            return null;
+        }
     }
 }
