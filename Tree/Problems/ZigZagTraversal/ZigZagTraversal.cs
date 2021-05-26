@@ -23,17 +23,14 @@ namespace Datastructure.Tree.Problems.ZigZagTraversal
             queue.Enqueue(this.root);
             queue.Enqueue(null);
             bool isLeftToRight = false;
-            while (queue.Count != 0)
+            while (queue.Count > 1 )
             {
                 var currentNode = (TreeDSNode)queue.Dequeue();
                 if (currentNode == null)
                 {
-                    if (queue.Count > 1)
-                    {
-                        isLeftToRight = !isLeftToRight;
+                       isLeftToRight = !isLeftToRight;
                         queue.Enqueue(null);
                         continue;
-                    }
                 }
                 else
                 {

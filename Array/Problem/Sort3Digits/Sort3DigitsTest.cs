@@ -8,6 +8,7 @@ using System.Threading.Tasks;
 
 namespace Datastructure.Array.Problem.Sort3Digits
 {
+    [TestFixture]
     class Sort3DigitsTest
     {
 

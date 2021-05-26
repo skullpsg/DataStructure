@@ -40,7 +40,7 @@ namespace Datastructure.Array.Problem.Sort3Digits
                 {
                     swap(low++, mid++);
                 }
-                else if (array[mid] == array[high] && array[mid] == 2)
+                else if (array[mid] == array[high] && array[high] == 2)
                 {
                     high--;
                 }
