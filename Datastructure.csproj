@@ -69,6 +69,8 @@
     <Compile Include="Array\Problem\2Sum\TwoSum.cs" />
     <Compile Include="Common\IAlgorithm.cs" />
     <Compile Include="Common\MockWriter.cs" />
+    <Compile Include="DynamicProblem\CoinChange\CoinChangeTest.cs" />
+    <Compile Include="DynamicProblem\CoinChange\CoinsChange.cs" />
     <Compile Include="IConsoleWriter.cs" />
     <Compile Include="LinkedList\LinkedListDS.cs" />
     <Compile Include="LinkedList\model\LinkedListNode.cs" />
@@ -124,6 +126,7 @@
   <ItemGroup>
     <Folder Include="Array\Model\" />
     <Folder Include="Error\" />
+    <Folder Include="GreedyAlgo\" />
     <Folder Include="Queue\" />
     <Folder Include="Stack\" />
   </ItemGroup>
