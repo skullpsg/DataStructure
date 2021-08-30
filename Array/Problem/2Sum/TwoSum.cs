@@ -33,7 +33,7 @@ namespace Datastructure.Array.Problem
                 if (ramainingsDict.ContainsKey(current))
                 {
                     int oldIndex = ramainingsDict[current];
-                    return new int[] { oldIndex, index };
+                    return new int[] { oldIndex, index++ };
                 }
                 ramainingsDict.Add(remaining, index);
             }

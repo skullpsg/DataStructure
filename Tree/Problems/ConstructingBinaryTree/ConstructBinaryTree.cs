@@ -89,9 +89,7 @@ namespace Datastructure.Tree.Problems.ConstructingBinaryTree
             {
                 return root;
             }
-
-            int indexOfFirstNodeInInorder = inOrder.IndexOf(root.Value);
-
+           
             root.Left = FromInorderAndLevelOrder(inOrder, levelOrder, startIndex, levelIndex - 1);
             root.Right = FromInorderAndLevelOrder(inOrder, levelOrder, levelIndex + 1, endIndex);
 
