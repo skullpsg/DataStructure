@@ -10,6 +10,8 @@ namespace Datastructure.DynamicProblem
     {
    
         int[,] cache = new int[6,6];
+
+        // O( amount * index)
         public int GetChangePossibilities(int amount,int index, int[] coins){
             if (cache[amount, index] > 0) {
                 return cache[amount, index];

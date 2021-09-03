@@ -65,6 +65,8 @@ namespace Datastructure.DynamicProblem.RobotInAGrid
             public static bool operator !=(Path lhs, Path rhs) => !(lhs == rhs);
 
         }
+
+        // Time and space -> O(Row * Col)
         public Boolean FindPath(char[,] grid, int row, int col, Dictionary<Path, Boolean> cache)
         {
 
