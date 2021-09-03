@@ -71,6 +71,8 @@
     <Compile Include="Common\MockWriter.cs" />
     <Compile Include="DynamicProblem\CoinChange\CoinChangeTest.cs" />
     <Compile Include="DynamicProblem\CoinChange\CoinsChange.cs" />
+    <Compile Include="DynamicProblem\StairCase\StairCase.cs" />
+    <Compile Include="DynamicProblem\StairCase\StairCaseTest.cs" />
     <Compile Include="GenericTree\Model\GenericTreeNode.cs" />
     <Compile Include="GenericTree\SumOfNodes\GenericTreeNodeTest.cs" />
     <Compile Include="GenericTree\SumOfNodes\SumOfNodes.cs" />
