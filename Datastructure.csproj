@@ -71,6 +71,8 @@
     <Compile Include="Common\MockWriter.cs" />
     <Compile Include="DynamicProblem\CoinChange\CoinChangeTest.cs" />
     <Compile Include="DynamicProblem\CoinChange\CoinsChange.cs" />
+    <Compile Include="DynamicProblem\NQueen\NQueen.cs" />
+    <Compile Include="DynamicProblem\NQueen\NQueenTest.cs" />
     <Compile Include="DynamicProblem\RobotInAGrid\RobotInAGrid.cs" />
     <Compile Include="DynamicProblem\RobotInAGrid\RobotInAGridTest.cs" />
     <Compile Include="DynamicProblem\StairCase\StairCase.cs" />
