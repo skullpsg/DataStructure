@@ -14,7 +14,18 @@ namespace Datastructure.StringAlgo
             var stringMatcher = new StringMatching();
             int stratingIndex = stringMatcher.MatchInBruteForce(str1, str2);
 
-            Assert.AreEqual(stratingIndex,12);
+            Assert.AreEqual(stratingIndex, 12);
+        }
+
+        [Test]
+        public void ShouldMatchStingKMP()
+        {
+            string str1 = "vishnusankarsakthivel";
+            string str2 = "sak";
+            var stringMatcher = new StringMatching();
+            int stratingIndex = stringMatcher.MatchUsingKMP(str2, str1);
+
+            Assert.AreEqual(stratingIndex, 12);
         }
     }
 }
