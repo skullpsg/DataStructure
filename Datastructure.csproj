@@ -67,6 +67,8 @@
     <Compile Include="Array\Problem\Sort3Digits\Sort3DigitsTest.cs" />
     <Compile Include="Array\Problem\Sort3Digits\Sort3Digits.cs" />
     <Compile Include="Array\Problem\2Sum\TwoSum.cs" />
+    <Compile Include="Array\Problem\SumOfDifference\SumOfDifference.cs" />
+    <Compile Include="Array\Problem\SumOfDifference\SumOfDifferenceTest.cs" />
     <Compile Include="Common\IAlgorithm.cs" />
     <Compile Include="Common\MockWriter.cs" />
     <Compile Include="DynamicProblem\CoinChange\CoinChangeTest.cs" />
