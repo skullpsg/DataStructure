@@ -86,10 +86,16 @@
     <Compile Include="LinkedList\LinkedListDS.cs" />
     <Compile Include="LinkedList\model\LinkedListNode.cs" />
     <Compile Include="LinkedList\Test\LinkedListDSTest.cs" />
+    <Compile Include="PriorityQueue\Model\IPriorityQueueNode.cs" />
+    <Compile Include="PriorityQueue\Model\PriorityQueueNode.cs" />
+    <Compile Include="PriorityQueue\Model\PriorityQueueType.cs" />
+    <Compile Include="PriorityQueue\PriorityQueue.cs" />
+    <Compile Include="PriorityQueue\PriorityQueueTest.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StringAlgo\StringMatching.cs" />
     <Compile Include="StringAlgo\StringMatchingTest.cs" />
+    <Compile Include="StringAlgo\WordCountInPara\WordInPara.cs" />
     <Compile Include="Tree\Model\TreeDSNode.cs" />
     <Compile Include="Tree\Problems\BottomViewOfTree\BottomViewOfTree.cs" />
     <Compile Include="Tree\Problems\BottomViewOfTree\BottomViewOfTreeTest.cs" />
@@ -142,6 +148,7 @@
     <Folder Include="GreedyAlgo\" />
     <Folder Include="Queue\" />
     <Folder Include="Stack\" />
+    <Folder Include="Trie\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
