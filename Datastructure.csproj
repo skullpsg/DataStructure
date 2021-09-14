@@ -136,6 +136,9 @@
     <Compile Include="Tree\Problems\TreeTraversal\TreeTraversalTest.cs" />
     <Compile Include="Tree\Problems\ZigZagTraversal\ZigzagTraversalTest.cs" />
     <Compile Include="Tree\Problems\TreeTraversal\TreeTraversal.cs" />
+    <Compile Include="Trie\Model\TrieNode.cs" />
+    <Compile Include="Trie\Trie.cs" />
+    <Compile Include="Trie\TrieTest.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include=".gitignore" />
@@ -148,7 +151,6 @@
     <Folder Include="GreedyAlgo\" />
     <Folder Include="Queue\" />
     <Folder Include="Stack\" />
-    <Folder Include="Trie\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

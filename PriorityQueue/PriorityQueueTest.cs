@@ -22,6 +22,11 @@ namespace Datastructure.PriorityQueue
             PriorityQueue.Enqueue(new PriorityQueueNode(6));
             PriorityQueue.Enqueue(new PriorityQueueNode(1));
             Assert.AreEqual(1, PriorityQueue.Dequeue().priority);
+            Assert.AreEqual(2, PriorityQueue.Dequeue().priority);
+            Assert.AreEqual(3, PriorityQueue.Dequeue().priority);
+            Assert.AreEqual(6, PriorityQueue.Dequeue().priority);
+            Assert.AreEqual(7, PriorityQueue.Dequeue().priority);
+            Assert.AreEqual(9, PriorityQueue.Dequeue().priority);
         }
     }
 }
