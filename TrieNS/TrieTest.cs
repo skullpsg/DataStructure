@@ -1,11 +1,7 @@
-﻿using NUnit.Framework;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using Datastructure.TrieNS.Model;
+using NUnit.Framework;
 
-namespace Datastructure.Trie
+namespace Datastructure.TrieNS
 {
     [TestFixture]
     public class TrieTest
@@ -13,7 +9,7 @@ namespace Datastructure.Trie
         [Test]
         public void ShouldReturnTrueIfWordFound()
         {
-            Trie trie = new Trie();
+            Trie<TrieNode> trie = new Trie<TrieNode>(new TrieNode('*'));
             trie.Add("sample");
             trie.Add("sam");
             trie.Add("sam1");
@@ -21,6 +17,8 @@ namespace Datastructure.Trie
             trie.Add("sam12345");
             Assert.IsFalse(trie.IsWordFound("sam2"));
             Assert.IsTrue(trie.IsWordFound("sam123"));
+            var actualResponse = trie.Add("sam123");
+            Assert.AreEqual(actualResponse.count, 2);
         }
     }
 }

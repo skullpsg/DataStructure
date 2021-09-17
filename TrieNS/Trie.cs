@@ -1,21 +1,22 @@
-﻿using Datastructure.Trie.Model;
+﻿using Datastructure.TrieNS.Model;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
-namespace Datastructure.Trie
+namespace Datastructure.TrieNS
 {
-    public class Trie
+    public class Trie<T> where T : TrieNodeBase, new()
     {
-        private TrieNode root;
+        protected T root;
+
         public Trie()
         {
-            this.root = new TrieNode('*');
+
+        }
+        public Trie(T node)
+        {
+            this.root = node;
         }
 
-        public void Add(string str)
+        public T Add(string str)
         {
             var current = root;
 
@@ -24,19 +25,26 @@ namespace Datastructure.Trie
                 var c = str[i];
                 if (current.nodes[c] == null)
                 {
-                    var newNode = new TrieNode(c);
+                    T newNode = CreateNode(c);
                     current.nodes[c] = newNode;
                     current = newNode;
                 }
                 else
                 {
-                    current = current.nodes[c];
+                    current = (T)current.nodes[c];
                 }
                 if (i + 1 == str.Length)
                 {
+                    current.count++;
                     current.isEnd = true;
                 }
             }
+            return current;
+        }
+
+        private T CreateNode(char ch)
+        {
+            return (T)Activator.CreateInstance(typeof(T), new object[] { ch });
         }
 
         public bool IsWordFound(string str)
@@ -54,7 +62,7 @@ namespace Datastructure.Trie
                         isWordFound = current.nodes[c].isEnd;
                         break;
                     }
-                    current = current.nodes[c];
+                    current = (T)current.nodes[c];
                 }
                 else
                 {
